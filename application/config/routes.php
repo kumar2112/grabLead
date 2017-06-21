@@ -53,3 +53,5 @@ $route['default_controller'] = 'defaults/view';
 $route['(:any)'] = 'defaults/view/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+//$route['register']="httpAction/registerUser";

@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="contact_left wow fadeInLeft">
-                                <form action="<?php echo base_url()?>/httpAction/registerUser" class="submitphoto_form" name="user_info_form" method="post">
+                                <form action="<?php echo base_url()?>index.php/httpAction/registerUser" name="user_info_form" method="post">
                                     <div class="col-md-6">
                                         <input type="text" class="form-control wpcf7-text" placeholder="Your first name" name="u_firstname">
                                     </div>
@@ -56,7 +56,7 @@
                                         <textarea name="u_description" class="form-control wpcf7-textarea" cols="30" rows="10" placeholder="What would you like to tell us"></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <input type="submit" value="Submit" class="wpcf7-submit photo-submit"> 
+                                        <input type="submit" value="Submit" class="wpcf7-submit"> 
                                     </div>
                                 </form>
                             </div>                  

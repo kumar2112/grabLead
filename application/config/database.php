@@ -80,7 +80,7 @@ $db['default'] = array(
 	'password' => '',
 	'database' => 'grablead',
 	'dbdriver' => 'mysqli',
-	'dbprefix' => 'gl',
+	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
