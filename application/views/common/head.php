@@ -51,5 +51,8 @@
 
         <!-- custom js file include -->
         <script src="<?php echo base_url()?>assets/js/custom.js"></script>  
+        
+        <!-- grabLead js file include -->
+        <script src="<?php echo base_url()?>assets/js/grabLead.js"></script>  
     </head>
         <body>
