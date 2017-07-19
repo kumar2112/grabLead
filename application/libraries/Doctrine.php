@@ -34,7 +34,7 @@ class Doctrine {
     require_once APPPATH.'config/database.php';
 
     // include Doctrine's ClassLoader class
-    //require_once APPPATH.'third_party/Doctrine/Common/ClassLoader.php';
+    require_once APPPATH.'third_party/Doctrine/Common/ClassLoader.php';
 
     // load the Doctrine classes        
     //$doctrineClassLoader = new ClassLoader('Doctrine',  APPPATH.'third_party');
