@@ -129,3 +129,5 @@ $autoload['language'] = array();
 $autoload['model'] = array();
 
 
+//$autoload['libraries'] = array('doctrine');
+

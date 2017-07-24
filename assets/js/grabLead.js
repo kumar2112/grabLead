@@ -20,5 +20,7 @@ jQuery(function(){
         });
         return false; 
     });
+    
+    //jQuery('.datepicker').datepicker();
 })
 

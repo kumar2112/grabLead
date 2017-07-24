@@ -21,8 +21,8 @@
                                     <div class="col-md-6">
                                         <input type="text" class="form-control wpcf7-text" placeholder="Your email " name="u_email">
                                     </div>
-                                    <div class="col-md-6">
-                                        <input type="text" class="form-control wpcf7-text" placeholder="Your date of birth" name="u_date_of_birth">
+                                    <div class='col-md-6'>
+                                        <input type="text" class="form-control wpcf7-text" placeholder="Date of Birth " name="u_date_of_birth">
                                     </div>
                                     <div class="col-md-6">
                                         <select class="form-control wpcf7-text" name="u_account_type"  placeholder="I am intrested in">

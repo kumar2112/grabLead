@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,60 +11,43 @@
  *
  * @author Pravin
  */
-class User extends CI_Model {
+
+
+class User_model extends CI_Model {
     
-    /*
-     * @var int ID 
-    */
-    public $u_id;
-    
-    /*
-     * @var string u_uniquename
-    */
-    public $u_uniquename;
-    /*
-     * @var string u_password
-    */
-    public $u_password;
-    /*
-     * @var string u_email 
-    */
-    public $u_email;
-    /*
-     * @var string u_firstname 
-    */
     public $u_firstname;
-    /*
-     * @var string u_lastname 
-    */
     public $u_lastname;
-    /*
-     * @var string u_date_of_birth 
-    */
+    public $u_email;
     public $u_date_of_birth;
-    
-    /*
-     * @var string u_account_type 
-    */
     public $u_account_type;
-    /*
-     * @var string u_country 
-    */
-    public $u_country;
-    /*
-     * @var string u_currency 
-    */
     public $u_currency;
-    
-    /*
-     * @var string u_description 
-    */
-    public $u_description;
-    
-    /*
-     * public function save user
-    */
-    public function save_user(){
-        
+    public $u_country;
+    public function __construct(){
+            parent::__construct();
+            // Your own constructor code
     }
+    public function saveUser($data){
+        $this->u_firstname=$data['u_firstname'];
+        $this->u_lastname=$data['u_lastname'];
+        $this->u_email=$data['u_email'];
+        $this->u_date_of_birth=$data['u_date_of_birth'];
+        $this->u_country=$data['u_country'];
+        $this->u_account_type=$data['u_account_type'];
+        $this->u_currency=$data['u_currency'];
+        
+        $this->db->insert('user', $this);
+    }
+    
+    public function CheckUserEmail($email){
+        $this->db->select('u_email');
+        $this->db->from('user');
+        $this->db->where('u_email', $email); 
+        $query = $this->db->get();
+        if ( $query->num_rows() > 0 ){
+            return true;
+        }
+        return false;
+    }
+    
+    
 }
