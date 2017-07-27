@@ -49,7 +49,7 @@
         <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="<?php echo base_url()?>assets/js/jquery.ui.map.js"></script>
         <script src="<?php echo base_url()?>assets/js/bootstrap-datetimepicker.min.js"></script>
-        
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
         <!-- custom js file include -->
         <script src="<?php echo base_url()?>assets/js/custom.js"></script>  
         

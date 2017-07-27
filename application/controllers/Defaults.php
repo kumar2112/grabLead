@@ -27,10 +27,9 @@ class Defaults extends CI_Controller {
         {
                 if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
                 {
-                        // Whoops, we don't have a page for that!
-                        //show_404();
+                        //Whoops, we don't have a page for that!
+                       show_404();
                 }
-
                 $data['title'] = ucfirst($page); // Capitalize the first letter
                 $this->load->view('common/head');
                 $this->load->view('common/header');

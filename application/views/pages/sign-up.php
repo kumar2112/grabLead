@@ -1,3 +1,5 @@
+<!-- Modal -->
+
 <!-- start Contact section -->
   <section id="contact">
     <div class="container">
@@ -8,6 +10,24 @@
                         <hr>
                         <h2>We Would <span>Love To Hear From You</span></h2>
                     </div>
+                              
+                </div>
+            </div>
+        
+        </div>
+    </div>
+</section>
+<!-- End Contact section -->
+   
+<div id="SignUpModal" class="modal fade" role="dialog" style="z-index: 99999">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body" style="height: auto;overflow: hidden;">
+                 <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="contact_area">
+                     <h2 class="text-center">JOIN US</h2>
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="contact_left wow fadeInLeft">
@@ -20,6 +40,9 @@
                                     </div>
                                     <div class="col-md-6">
                                         <input type="text" class="form-control wpcf7-text" placeholder="Your email " name="u_email">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="password" class="form-control wpcf7-text" placeholder="Password " name="u_password">
                                     </div>
                                     <div class='col-md-6'>
                                         <input type="text" class="form-control wpcf7-text" placeholder="Date of Birth " name="u_date_of_birth">
@@ -36,13 +59,6 @@
                                             <option>Your Country:</option>
                                             <option value="In">India</option>
                                             <option  value="Eu">Europe</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <select class="form-control wpcf7-text" name="u_term_condition"  placeholder="Terms And Condition">
-                                            <option>Agreed With Term and Condition:</option>
-                                            <option value="Y">Yes</option>
-                                            <option value="N">No</option>
                                         </select>
                                     </div>
                                     <div class="col-md-6">
@@ -66,7 +82,17 @@
             </div>
         
         </div>
-    </div>
-</section>
-<!-- End Contact section -->
+            </div>
+        </div>
 
+    </div>
+</div>
+<script type="text/javascript">
+ jQuery(document).ready(function(){
+        jQuery("#SignUpModal").modal({
+            backdrop: 'static',
+            keyboard: false
+        }
+     );
+ })
+</script>

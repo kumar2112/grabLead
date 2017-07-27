@@ -17,11 +17,34 @@ class HttpAction extends CI_Controller {
     public $layout = null;
     public function registerUser(){
         $this->load->model('user_model');
+        $_RESPONSE=array();
         if(!$this->user_model->CheckUserEmail($_POST['u_email'])){
             $this->user_model->saveUser($_POST);
-            echo "thank you have successfully registered with us";
+            $_RESPONSE['CODE']=1;
+            $_RESPONSE['URL']=base_url('view/sign-up-success');
         }else{
-            echo "Email taken.try with other one.";
+            $_RESPONSE['CODE']=0;
+            $_RESPONSE['MSG']="An account is attached with given url";
         }
+        echo json_encode($_RESPONSE);
+    }
+    
+    public function login(){
+        $this->load->model('user_model');
+        $_RESPONSE=array();
+        if($user=$this->user_model->CheckUserEmail($_POST['u_email'])){
+            if($user->u_password==md5($_POST['u_password'])){
+                $this->session->set_userdata('user',$user);
+                $_RESPONSE['CODE']=1;
+                $_RESPONSE['URL']="";
+            }else{
+                $_RESPONSE['CODE']=0;
+                $_RESPONSE['MSG']="InValid Password";
+            }
+        }else{
+            $_RESPONSE['CODE']=0;
+            $_RESPONSE['MSG']="No Such user Found";
+        }
+        echo json_encode($_RESPONSE);
     }
 }

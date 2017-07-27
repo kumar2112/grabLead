@@ -55,3 +55,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //$route['register']="httpAction/registerUser";
+$route['view/sign-up-success']='defaults/view/sign-up-success';

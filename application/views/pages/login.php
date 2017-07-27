@@ -505,11 +505,11 @@
         <div class="modal-content">
             <div class="modal-body" style="height: auto;overflow: hidden;">
                 <div class="col-lg-12 col-md-12 col-sm-12">
-                    <img src="<?php echo base_url()?>assets/img/user.png" style="width:100px;height:100px;margin-left:40%;margin-top:0%" class="img-circle">
+                    <img src="<?php echo base_url()?>assets/img/user.png" class="img-circle img-center" width="100" height="100">
                     <div class="contact_left wow fadeInLeft">
-                      <form class="submitphoto_form">
-                        <input type="text" class="form-control wpcf7-text" placeholder="UserName">
-                        <input type="mail" class="form-control wpcf7-email" placeholder="Password">          
+                      <form name="login_form" action="<?php echo base_url()?>index.php/httpAction/login" method="post">
+                        <input type="text" name ="u_email" class="form-control wpcf7-text" placeholder="UserName">
+                        <input type="password" name="u_password" class="form-control wpcf7-email" placeholder="Password">          
                         <input type="submit" value="Login" class="wpcf7-submit photo-submit">                     
                       </form>
                     </div>                  
